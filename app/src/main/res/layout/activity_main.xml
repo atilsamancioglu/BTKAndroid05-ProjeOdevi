@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/number1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="İlk numarayı giriniz"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="İkinci numarayı giriniz"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1Text" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="227dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2Text">
+
+        <Button
+            android:id="@+id/buttonTopla"
+            android:layout_width="56dp"
+            android:layout_height="48dp"
+            android:onClick="topla"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/buttonBol"
+            android:layout_width="56dp"
+            android:layout_height="48dp"
+            android:onClick="bol"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/buttonCarp"
+            android:layout_width="56dp"
+            android:layout_height="48dp"
+            android:onClick="carp"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/buttonCikar"
+            android:layout_width="56dp"
+            android:layout_height="48dp"
+            android:onClick="cikar"
+            android:text="-" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sonucText"
+        android:layout_width="247dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Sonuç: "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
